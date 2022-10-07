@@ -1,7 +1,7 @@
 package org.zerock.random.mapper;
 
 import org.zerock.random.command.RandomVO;
-
+dgd
 public interface RandomMapper {
-	public RandomVO selectfood(int fno);	//수정 테스트 함
+	public RandomVO selectfood(int fno);	//수정 테스트 함dsvgas
 }
