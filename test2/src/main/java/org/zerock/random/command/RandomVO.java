@@ -7,10 +7,11 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class RandomVO {
-	private int fno;
-	private String fname;
-	private String country;
-	private String tag1;
-	private String tag2;
-	private String tab3;
+	private int FNO;
+	private String FNAME;
+	private String TAG1;
+	private String TAG2;
+	private String TAG3;
+	
+	public RandomVO() {}
 }

@@ -49,7 +49,8 @@
             </div>
             <form class="d-flex mt-4 mt-lg-0 ms-lg-auto ms-xl-0">
             	<button class="btn btn-white shadow-warning text-warning" type="submit"> board</button>
-				<button class="btn btn-white shadow-warning text-warning" type="submit"> join</button>
+            	<!-- session 처리 해야함 -->
+				<!-- <button class="btn btn-danger shadow-warning text-light" type="submit"> <i class="fas fa-user me-2"></i>join</button> -->
              	<button class="btn btn-danger shadow-warning text-light" type="submit"> <i class="fas fa-user me-2"></i>Login</button>
             </form>
           </div>

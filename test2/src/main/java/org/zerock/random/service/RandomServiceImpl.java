@@ -13,7 +13,7 @@ public class RandomServiceImpl implements RandomService {
 
 	@Override
 	public RandomVO selectfood(int fno) {
-		RandomVO vo = mapper.selectfood(fno);
+		RandomVO vo = mapper.selectFood(fno);
 		return vo;
 	}
 

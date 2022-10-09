@@ -1,5 +1,7 @@
 package org.zerock.random.controller;
 
+import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,12 +19,16 @@ public class RandomController {
 	@RequestMapping(value="/doRandom")
 	public String doRandom(Model model) {
 		
+		Random random = new Random();
+		
 		//토탈 수 구해와서 어쩌구 저쩌구 
-		int fno = (int)(Math.random()*100);
+		int fno = (int)(random.nextInt(27));
 		
 		System.out.println(fno);
 		
 		RandomVO vo = service.selectfood(fno);
+		
+		System.out.println(vo.getFNAME());
 		
 		model.addAttribute("vo", vo);
 		
