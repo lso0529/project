@@ -7,39 +7,39 @@
 
 	<!-- 게시물 목록 -->
 	<select id="getList" resultType="org.zerock.board.command.BoardVO">
-		select * from tbl_board order by bno desc
+		select * from board01 order by bno desc
 	</select>
 
 	<!-- 게시물 등록 -->
 	<insert id="insertBoard">
-		insert into tbl_board (bno, title, content, writer)
+		insert into board01 (bno, title, content, writer)
 		values(seq_board.nextval, #{title}, #{content}, #{writer})
 	</insert>
 	
 	<!-- 게시물 상세보기 resultType : 조회 결과 값을 저장하기 위한 데이터 타입-->
 	<select id="getContent" resultType="org.zerock.board.command.BoardVO" parameterType="int">
-		select * from tbl_board where bno= #{num}
+		select * from board01 where bno= #{num}
 	</select>
 	
 	<!-- 게시물 수정하기  paramterType : 전달받은 파라이터 데이터 타입 지정-->
 	<update id="updateBoard" parameterType="org.zerock.board.command.BoardVO">
-		update tbl_board set title = #{title}, content = #{content}, writer = #{writer}, updatedate = sysdate where bno = #{bno}
+		update board01 set title = #{title}, content = #{content}, writer = #{writer}, updatedate = sysdate where bno = #{bno}
 	</update>
 
 	<!-- 게시물 삭제하기 -->
 	<delete id="deleteBoard" parameterType="int">
-		delete from tbl_board where bno = #{num}
+		delete from board01 where bno = #{num}
 	</delete>
 	
 	<!-- 페이징 쿼리 -->
 	<select id="pagingList" resultType="org.zerock.board.command.BoardVO" parameterType="org.zerock.board.command.Criteria">
 		select * from 
-		(select rownum as rnum, B.* from tbl_board B where rownum &lt;= #{count_oracle} order by bno desc)
+		(select rownum as rnum, B.* from board01 B where rownum &lt;= #{count_oracle} order by bno desc)
 		where #{pageStart} &lt;= rnum	
 	</select>
 	
 	<!-- 전체 게시물 수 -->
 	<select id="getTotal" resultType="int">
-		select count(*) from tbl_board
+		select count(*) from board01
 	</select>
 </mapper>
