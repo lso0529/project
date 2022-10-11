@@ -28,9 +28,9 @@
 	<!-- interceptor 등록/설정 -->
 	<interceptors>
 		<interceptor>
-			<mapping path="/board/*.jsp"/>
-			<exclude-mapping path="/board/list.jsp"/>
-			<exclude-mapping path="/board/content.jsp"/>
+			<mapping path="/board/*"/>
+			<exclude-mapping path="/board/list"/>
+			<exclude-mapping path="/board/content"/>
 			<beans:ref bean="BoardInterceptor"/>
 		</interceptor>
 	</interceptors>
