@@ -7,4 +7,8 @@
  	<select id="selectFood" resultType="org.zerock.random.command.RandomVO">
  		select * from food01 where fno = #{fno}
  	</select>
+ 	
+	<select id="getTotal" resultType="int">
+		select count(*) from food01
+	</select>
  </mapper>

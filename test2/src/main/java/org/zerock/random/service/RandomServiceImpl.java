@@ -16,5 +16,10 @@ public class RandomServiceImpl implements RandomService {
 		RandomVO vo = mapper.selectFood(fno);
 		return vo;
 	}
-
+	
+	@Override
+	public int getTotal() {
+		int total = mapper.getTotal();
+		return total;
+	}
 }
