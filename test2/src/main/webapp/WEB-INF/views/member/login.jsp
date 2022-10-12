@@ -44,7 +44,7 @@
 							
 							<hr>
 							<div class="text-center">
-				                <a class="small" href="/Controller">메인으로</a><!-- 절대경로 -->
+				                <a class="small" href="/project">메인으로</a><!-- 절대경로 -->
 				            </div>			
 				            <div class="col-lg-3"></div>						
 						</div>
