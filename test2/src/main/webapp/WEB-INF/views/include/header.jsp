@@ -45,13 +45,12 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
           <div class="collapse navbar-collapse border-top border-lg-0 my-2 mt-lg-0" id="navbarSupportedContent">
             <div class="mx-auto pt-5 pt-lg-0 d-block d-lg-none d-xl-block">
-              <p class="mb-0 fw-bold text-lg-center">Deliver to: <i class="fas fa-map-marker-alt text-warning mx-2"></i><span class="fw-normal">Current Location </span><span>Mirpur 1 Bus Stand, Dhaka</span></p>
             </div>
             <form class="d-flex mt-4 mt-lg-0 ms-lg-auto ms-xl-0">
-            	<button class="btn btn-white shadow-warning text-warning" type="submit"> board</button>
+            	<button class="btn btn-white shadow-warning text-warning" type="button" onclick="location.href='/project/board/list'">board</button>
             	<!-- session 처리 해야함 -->
 				<!-- <button class="btn btn-danger shadow-warning text-light" type="submit"> <i class="fas fa-user me-2"></i>join</button> -->
-             	<button class="btn btn-danger shadow-warning text-light" type="submit"> <i class="fas fa-user me-2"></i>Login</button>
+             	<button class="btn btn-danger shadow-warning text-light" type="button" onclick="location.href='/project/member/login'"> <i class="fas fa-user me-2"></i>Login</button>
             </form>
           </div>
         </div>

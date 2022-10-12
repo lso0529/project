@@ -5,7 +5,7 @@
         <div class="container">
           <div class="row flex-center">
             <div class="col-md-7 col-lg-6 py-8 text-md-start text-center">
-				<h1 class="display-1 fs-md-5 fs-lg-6 fs-xl-8 text-light">${food.FNAME }주변 식당 보기</h1>
+				<h1 class="display-1 fs-md-5 fs-lg-6 fs-xl-8 text-light">${food.FNAME } 주변 식당 보기</h1>
 				<div id="map" style="width:100%;height:350px;"></div>
 				
 			</div>
