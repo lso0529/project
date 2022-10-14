@@ -28,6 +28,13 @@
             <label>내용</label>
             <textarea class="form-control" rows="5" name='content' id='content'></textarea>
           </div>
+          
+          <div class="form-group" id="file-list">
+          	<a href="#this" onclick="addfile()">이미지 추가</a>
+          	<div class="file-group">
+          		<input type="file" name="file"><a href='#this' name='file-delete'>삭제</a>
+          	</div>
+          </div>
 
           <div class="form-group">
             <label>작성자</label>
@@ -60,6 +67,29 @@
 		}else{
 			$("#regForm").submit();
 		}
+	}
+</script>
+
+<!-- 이미지업로드 관련 -->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("a[name='file-delete']").on("click",function(e){
+			e.preventDefault();
+			deleteFile($(this));
+		});
+	})
+	
+	function addFile() {
+		var str = "<div class='file-group'><input type='file' name='file'><a href='#this' name='file-delete'>삭제</a></div>";
+		$("#file-list").append(str);
+		$("a[name='file-delete']").on("click", function(e){
+			e.preventDefault();
+			deleteFile($(this));
+		});
+	}
+	
+	function deleteFile(obj) {
+		obj.parent().remove();
 	}
 </script>
 

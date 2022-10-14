@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.zerock.board.mapper.ImageMapper">
+
+	<!-- 사진 등록 -->
+	<insert id="insertImage">
+		insert into boardImage (uuid, uploadpath, filename, filetype, bno)
+		values(#{uuid}, #{uploadpath}, #{filename}, #{filetype}, seq_board.nextval)
+	</insert>
+	
+</mapper>

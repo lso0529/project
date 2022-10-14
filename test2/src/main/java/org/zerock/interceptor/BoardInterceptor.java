@@ -16,7 +16,7 @@ public class BoardInterceptor extends HandlerInterceptorAdapter {
 		String user_id = (String)session.getAttribute("user_id");
 		
 		if(user_id == null) {
-			response.sendRedirect("/member/login");
+			response.sendRedirect("/project/member/login");
 			return false;
 			
 		}else {
