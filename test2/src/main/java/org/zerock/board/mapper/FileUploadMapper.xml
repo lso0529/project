@@ -3,10 +3,10 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
-<mapper namespace="org.zerock.board.mapper.BoardMapper">
+<mapper namespace="org.zerock.board.mapper.FileUploadMapper">
 	<insert id="uploadFile" parameterType="HashMap">
-		INSERT INTO
-		FILE_TABLE (FILE_NUM, O_NAME, FILE_NAME, FILE_SIZE,
-		BNO) VALUES (file_seq.nextval, #{originalfileName}, #{saveFileName}, #{fileSize}, seq_board.currval)
+		insert into
+		FILE_TABLE (file_num, o_name, file_name, file_size, bno) 
+		values (seq_file.nextval, #{o_name}, #{file_name}, #{file_size}, seq_board.currval)
 	</insert>
 </mapper>
