@@ -38,6 +38,13 @@
             <label>내용</label>
             <textarea class="form-control" rows="5" readonly="readonly">${board.content }</textarea>
           </div>
+          
+          <c:forEach var="uploadFile" items="${uploadFileList}">
+				<tr>
+					<td class="bgcolor1">파일</td>
+					<td class="bgcolor2">  <a href="/bbs2/download.do?o_name=${uploadFile.o_name}&file_name=${uploadFile.file_name}">${uploadFile.o_name}</a></td>
+				</tr>
+			</c:forEach>
 
           <div class="form-group">
             <label>작성자</label>

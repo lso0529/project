@@ -7,11 +7,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ImageVO {
+public class FileUploadVO {
 
-	private String uuid;
-	private String uploadpath;
-	private String filename;
-	private String filetype;
+	private int file_num;
+	private String o_name;
+	private String file_name;
+	private long file_size;
 	private int bno;
+	
 }

@@ -44,6 +44,12 @@
           <button type="button" class="btn btn-primary" onclick="location.href='list?pageNum=${cri.pageNum}&count=${cri.count }'">취소</button>
         </form>
 
+		<h1>이미지 업로드</h1>
+		<form action="multi_fileUpload"  method="post" enctype="multipart/form-data">
+			<!-- multiple 속성추가 -->
+		    <input type="file" name="uploadfiles" placeholder="파일 선택" multiple/><br/>
+		    <input type="submit" value="upload">
+		</form>
 
 
       </div>
