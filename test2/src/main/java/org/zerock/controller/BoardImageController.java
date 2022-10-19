@@ -21,15 +21,15 @@ public class BoardImageController {
 	@Autowired
 	private FileUploadService fileuploadService;
 
-	@RequestMapping(value = "/fileUploadJsp") // jsp파일명이랑 이름이 같아야한다.
+	@RequestMapping(value = "/register.*") 
 	public String fileUploadJsp(MultipartFile uploadfile, Model model) throws Exception {
 
 		System.out.println("register");
 
-		return "fileUpload";
+		return "board/register";
 	}
 
-	@PostMapping(value = "/multiFileUpload") // jsp파일명이랑 이름이 같아야한다.
+	@PostMapping(value = "/register/") 
 	public String multiFileUpload(MultipartFile[] uploadfiles, Model model) throws Exception {
 		// 파일을 받을 수 있게끔 MultipartFile 배열을 매개변수 선언
 
@@ -43,6 +43,6 @@ public class BoardImageController {
 			fileuploadService.saveFile(f);
 		}
 
-		return "fileUpload";
+		return "board/register";
 	}
 }

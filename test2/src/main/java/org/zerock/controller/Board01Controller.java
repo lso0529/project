@@ -23,7 +23,7 @@ public class Board01Controller {
 		private BoardService service;
 	
 		//페이징 화면 처리
-		@RequestMapping("/list")
+		@RequestMapping("/list")  // >> localhost:8080/project/board/list
 		public String list(Model model, Criteria cri) {
 			
 			ArrayList<BoardVO> list = service.getList(cri);
@@ -37,7 +37,7 @@ public class Board01Controller {
 		}
 		
 		//등록 화면으로 이동
-		@GetMapping("/register") 
+		@GetMapping("/register") // >> localhost:8080/project/board/register
 		public String register(@ModelAttribute("cri") Criteria cri) {
 			System.out.println("화면 처리");
 			return "board/register";
