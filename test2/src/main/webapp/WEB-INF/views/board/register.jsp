@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=Utf-8"
+    pageEncoding="Utf-8"%>
+<%@ include file="../include/header.jsp" %>
 
 <div class="row">
   <div class="col-lg-12">
@@ -29,26 +29,21 @@
             <textarea class="form-control" rows="5" name='content' id='content'></textarea>
           </div>
           
-          <div class="form-group" id="file-list">
-          	<a href="#this" onclick="addfile()">이미지 추가</a>
-          	<div class="file-group">
-          		<input type="file" name="file"><a href='#this' name='file-delete'>삭제</a>
-          	</div>
-          </div>
-
           <div class="form-group">
             <label>작성자</label>
             <input class="form-control" name='writer' id='writer'>
           </div>
-          <button type="button" class="btn btn-primary" onclick="register()">등록</button>
+          <hr>
+          <button type="submit" class="btn btn-primary" onclick="register()">등록</button>
           <button type="button" class="btn btn-primary" onclick="location.href='list?pageNum=${cri.pageNum}&count=${cri.count }'">취소</button>
         </form>
-
-		<h1>이미지 업로드</h1>
+		<hr>
+		<div class="card-header bg-primary text-white">이미지 등록</div>
+		<br>
 		<form action="multi_fileUpload"  method="post" enctype="multipart/form-data">
 			<!-- multiple 속성추가 -->
 		    <input type="file" name="uploadfiles" placeholder="파일 선택" multiple/><br/>
-		    <input type="submit" value="upload">
+		    <input type="file" name="file"><a href='#this' name='deletefiles'>삭제</a>
 		</form>
 
 
