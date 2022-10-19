@@ -8,7 +8,8 @@
           <div class="row flex-center">
             <div class="col-md-7 col-lg-6 py-8 text-md-start text-center">
               <h1 class="display-1 fs-md-5 fs-lg-6 fs-xl-8 text-light">${vo.FNAME }</h1>
-              <a href="resultMap?food=${vo.FNO }">주변 식당 보기</a>
+              <a href="resultMap?food=${vo.FNO }&&location=${location}">주변 식당 보기</a><br>
+              <a href="${pageContext.request.contextPath}/random/doRandom?location=${location}">다시하기</a>
 			</div>
 		</div>
 		</div>

@@ -24,7 +24,8 @@ public class RandomController {
 	RandomService service;
 	
 	@RequestMapping(value="/doRandom")
-	public String doRandom(Model model) {
+	public String doRandom(Model model,
+			@RequestParam("location") String location) {
 		Random random = new Random();
 		int total = service.getTotal();
 		
@@ -37,19 +38,20 @@ public class RandomController {
 		System.out.println(vo.getFNAME());
 		
 		model.addAttribute("vo", vo);
+		model.addAttribute("location", location);
 		
 		return "/random/result";
 	}
 	
 	@RequestMapping(value="/resultMap", method = RequestMethod.GET)
 	public String resultMap(@RequestParam(value="food") int fno,
-			//@RequestParam("location") String location,
+			@RequestParam("location") String location,
 			Model model) throws UnsupportedEncodingException {
-		
+		System.out.println(location);
 		RandomVO vo = service.selectfood(fno);
 		
 		model.addAttribute("food", vo);
-//		model.addAttribute("location", location);
+		model.addAttribute("location", location);
 		
 		return "/random/resultMap";
 	}

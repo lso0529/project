@@ -1,53 +1,41 @@
-      <!-- ============================================-->
+<%@ page language="java" contentType="text/html; charset=Utf-8"
+    pageEncoding="Utf-8"%>
+     <!-- ============================================-->
       <!-- <section> begin ============================-->
       <section class="py-0 pt-7 bg-1000">
 
         <div class="container">
           <div class="row justify-content-lg-between">
-            <h5 class="lh-lg fw-bold text-white">OUR TOP CITIES</h5>
+            <h5 class="lh-lg fw-bold text-white">빠른 검색</h5>
             <div class="col-6 col-md-4 col-lg-auto mb-3">
               <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">San Francisco</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Miami</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">San Diego</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">East Bay</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Long Beach</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=서울">서울</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=부산">부산</a></li>
               </ul>
             </div>
             <div class="col-6 col-md-4 col-lg-auto mb-3">
               <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Los Angeles</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Washington DC</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Seattle</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Portland</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Nashville</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=대전">대전</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=대구">대구</a></li>
               </ul>
             </div>
             <div class="col-6 col-md-4 col-lg-auto mb-3">
               <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">New York City</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Orange County</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Atlanta</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Charlotte</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Denver</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=광주">광주</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=인천">인천</a></li>
               </ul>
             </div>
             <div class="col-6 col-md-4 col-lg-auto mb-3">
               <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Chicago</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Phoenix</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Las Vegas</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Sacramento</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Oklahoma City</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=강릉">강릉</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=제주">제주</a></li>
               </ul>
             </div>
             <div class="col-6 col-md-4 col-lg-auto mb-3">
               <ul class="list-unstyled mb-md-4 mb-lg-0">
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Columbus</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">New Mexico</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Albuquerque</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">Sacramento</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="#!">New Orleans</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=전주">전주</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=인천">부천</a></li>
+
               </ul>
             </div>
           </div>
@@ -107,12 +95,12 @@
     <!-- ===============================================-->
     <!--    JavaScripts-->
     <!-- ===============================================-->
-    <script src="/resources/vendors/@popperjs/popper.min.js"></script>
-    <script src="/resources/vendors/bootstrap/bootstrap.min.js"></script>
-    <script src="/resources/vendors/is/is.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/vendors/@popperjs/popper.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/vendors/is/is.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="/resources/vendors/fontawesome/all.min.js"></script>
-    <script src="/resources/assets/js/theme.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/vendors/fontawesome/all.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/assets/js/theme.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap" rel="stylesheet">
   </body>

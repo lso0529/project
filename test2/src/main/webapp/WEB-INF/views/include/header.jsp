@@ -47,10 +47,15 @@
             <div class="mx-auto pt-5 pt-lg-0 d-block d-lg-none d-xl-block">
             </div>
             <form class="d-flex mt-4 mt-lg-0 ms-lg-auto ms-xl-0">
+                <%if(session.getAttribute("user_id")==null){ %>
             	<button class="btn btn-white shadow-warning text-warning" type="button" onclick="location.href='/project/board/list'">board</button>
             	<!-- session 처리 해야함 -->
 				<!-- <button class="btn btn-danger shadow-warning text-light" type="submit"> <i class="fas fa-user me-2"></i>join</button> -->
              	<button class="btn btn-danger shadow-warning text-light" type="button" onclick="location.href='/project/member/login'"> <i class="fas fa-user me-2"></i>Login</button>
+                <%}else{ %>
+                <button class="btn btn-white shadow-warning text-warning" type="button" onclick="location.href='/project/board/list'">board</button>
+                <button class="btn btn-danger shadow-warning text-light" type="button" onclick="location.href='/project/member/login'"> <i class="fas fa-user me-2"></i>Logout</button>
+                <%} %>
             </form>
           </div>
         </div>
