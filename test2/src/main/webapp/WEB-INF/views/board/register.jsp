@@ -111,9 +111,4 @@
  		</div>
  	</div>
  </div>
-          <hr>
-          <button type="submit" class="btn btn-primary" onclick="register()">등록</button>
-		<hr>
-		<div class="card-header bg-primary text-white">이미지 등록</div>
-		<br>
-		    <input type="file" name="file"><a href='#this' name='deletefiles'>삭제</a>
+
