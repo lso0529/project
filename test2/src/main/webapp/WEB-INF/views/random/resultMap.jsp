@@ -58,6 +58,13 @@
         <div id="pagination"></div>
     </div>
 </div>
+<div style="text-align: center; align-content:center; display: inline-block;" align="center">
+	<form class="row gx-2 gy-2 align-items-center" style="display: flex; align-items: center;height: 100%;" action="${pageContext.request.contextPath}/random/doRandom">
+		<div class="d-grid gap-3 col-sm-auto">
+			<button class="btn btn-danger" style="color:#F17228; background-color: #FFFEFE;" type="button" onclick="location.href='${pageContext.request.contextPath}/random/doRandom?location=${location }'">다시하기</button>
+		</div>
+	</form>
+</div>
 </body>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5b3dddc5cfe8131d930f6b01faf19f07&libraries=services"></script>
 <script>

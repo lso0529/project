@@ -6,8 +6,8 @@
           <div class="row flex-center">
             <div class="col-md-5 col-lg-6 order-0 order-md-1 mt-8 mt-md-0"><a class="img-landing-banner"><img class="img-fluid" src="${pageContext.request.contextPath}/resources/assets/img/gallery/image1.png" alt="hero-header" /></a></div>
             <div class="col-md-7 col-lg-6 py-8 text-md-start text-center">
-              <h1 class="display-1 fs-md-5 fs-lg-6 fs-xl-8 text-light">Are you starving?</h1>
-              <h1 class="text-800 mb-5 fs-4">Within a few clicks, find meals that<br class="d-none d-xxl-block" />are accessible near you</h1>
+              <h1 class="display-1 fs-md-5 fs-lg-6 fs-xl-8 text-light">오늘 뭐 먹지?</h1>
+              <h1 class="text-800 mb-5 fs-4">위치를 넣으면 <br>메뉴를 골라드립니다.</h1>
               <div class="card w-xxl-75">
                 <div class="card-body">
                   <div class="tab-content mt-3" id="nav-tabContent">
