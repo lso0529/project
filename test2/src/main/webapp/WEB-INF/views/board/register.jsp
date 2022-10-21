@@ -18,7 +18,7 @@
 
 
 
-        <form role="form" action="register" method="post" id="regForm">
+        <form role="form" action="register" method="post" id="regForm" enctype="multipart/form-data">
           <div class="form-group">
             <label>제목</label>
             <input class="form-control" name='title' id='title'>
@@ -34,19 +34,12 @@
             <input class="form-control" name='writer' id='writer'>
           </div>
           <hr>
+          <div class="card-header bg-primary text-white">이미지 등록</div><br>
+          <input type="file" name="uploadfiles" placeholder="파일 선택" multiple/>
+          <hr>
           <button type="submit" class="btn btn-primary" onclick="register()">등록</button>
           <button type="button" class="btn btn-primary" onclick="location.href='list?pageNum=${cri.pageNum}&count=${cri.count }'">취소</button>
         </form>
-		<hr>
-		<div class="card-header bg-primary text-white">이미지 등록</div>
-		<br>
-		<form action="multi_fileUpload"  method="post" enctype="multipart/form-data">
-			<!-- multiple 속성추가 -->
-		    <input type="file" name="uploadfiles" placeholder="파일 선택" multiple/><br/>
-		    <input type="file" name="file"><a href='#this' name='deletefiles'>삭제</a>
-		</form>
-
-
       </div>
       <!--  end card-body -->
     </div>
@@ -111,9 +104,4 @@
  		</div>
  	</div>
  </div>
-          <hr>
-          <button type="submit" class="btn btn-primary" onclick="register()">등록</button>
-		<hr>
-		<div class="card-header bg-primary text-white">이미지 등록</div>
-		<br>
-		    <input type="file" name="file"><a href='#this' name='deletefiles'>삭제</a>
+
