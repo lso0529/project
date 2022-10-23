@@ -2,7 +2,7 @@
     pageEncoding="Utf-8"%>
 <%@ include file="../include/header.jsp" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%String user_id= (String)session.getAttribute("user_id"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -113,6 +113,7 @@
         </div>
         <div class="form-group">
           <label>Replyer</label>
+          <!-- <input class="form-control" name='replyer' value="<%=user_id %>" placeholder="<%=user_id %>" readonly="readonly"> -->
           <input class="form-control" name='replyer' value="replyer">
         </div>
         <div class="form-group">
@@ -133,8 +134,10 @@
 </div>
 <!-- /.Modal -->
 
-<script src="${pageContext.request.contextPath}/resources/vendor/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/reply.js"></script>
+<!-- <script type="text/javascript" src="//code.jquery.com/jquery-3.4.0.min.js"></script> -->
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/vendors/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/assets/js/reply.js"></script>
 <script>
 $(document).ready(function(){
 	var bnoValue = '<c:out value="${board.bno }"/>';
@@ -326,7 +329,6 @@ $(document).ready(function(){
 		
 });
 </script>
-
 
 </body>
 </html>
