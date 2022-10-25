@@ -50,9 +50,9 @@ public class MemberController {
 		int result = service.join(vo);
 		//가입처리 성공여부에 따른 메시지 발송
 		if(result == 1) { //1을 리턴 받았다는 의미는 insert 성공
-		RA.addFlashAttribute("msg", "회원가입에 성공했습니다");
+			RA.addFlashAttribute("msg", "회원가입에 성공했습니다");
 		}else {
-		RA.addFlashAttribute("msg", "회원가입에 실패했습니다");
+			RA.addFlashAttribute("msg", "회원가입에 실패했습니다");
 		}
 		return "redirect:/member/join_result"; //리다이렉트 방식으로 로그인으로 접근
 	
@@ -82,11 +82,6 @@ public class MemberController {
 	public String logout(HttpSession session) {
 		session.invalidate();
 		return "redirect:/";
-	}
-	//아이디 찾기 폼 
-	@RequestMapping(value = "/find_id_form")
-	public String find_id_form() throws Exception{
-		return "/member/find_id_form";
 	}
 	
 	//ajax 테스트

@@ -10,14 +10,14 @@
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
 	
 	<!-- interceptor 설정(servlet-context.xml과 동일한 설정) -->
-	<!-- mapping tag의 요청이 들어오면 아래의 bean 동작
+	<!-- mapping tag의 요청이 들어오면 아래의 bean 동작 -->
 	<interceptors>
 		<interceptor>
 			<mapping path="/session/updatePage"/>
 			<mapping path="/session/myPage"/>
 			<beans:bean class="org.zerock.util.loginInterceptor"/>
 		</interceptor>
-	</interceptors> -->
+	</interceptors> 
 	
 	<!-- 1. AOP 라이브러리 다운로드(pom.xml) -->
 	<!-- 2. namespace aop 추가 -->

@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=Utf-8"
+    pageEncoding="Utf-8"%>
+<%@ include file="../include/header.jsp" %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>myPage.jsp</title>
+	</head>
+	<body>
+		<h2>마이페이지 입니다.</h2>
+		<h3>${sessionScope.user_id }님 로그인을 환영 합니다.</h3>
+		<a href="updatePage">회원정보 변경</a>
+		<a href="logout">로그 아웃</a>
+	</body>
+</html>
