@@ -13,14 +13,19 @@
 	  <title>로그인</title>
 	  	 
 	  <!-- Custom fonts for this template -->
-	  <link href="${pageContext.request.contextPath}/resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-	  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-	
-	  <!-- Custom styles for this template -->
-	  <link href="${pageContext.request.contextPath}/resources/css/sb-admin-2.min.css" rel="stylesheet">
-	
-	  <!-- Custom styles for this page -->
-	  <link href="${pageContext.request.contextPath}/resources/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="${pageContext.request.contextPath}/resources/assets/img/favicons/apple-touch-icon.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="${pageContext.request.contextPath}/resources/assets/img/favicons/favicon-32x32.png">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/assets/img/favicons/favicon-16x16.png">
+
+    <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/assets/img/favicons/favicon.ico">
+
+    <link rel="manifest" href="${pageContext.request.contextPath}/resources/assets/img/favicons/manifest.json">
+
+    <meta name="msapplication-TileImage" content="${pageContext.request.contextPath}/resources/assets/img/favicons/mstile-150x150.png">
+
+    <meta name="theme-color" content="#ffffff">
 	  
 	  
 	</head>
@@ -65,24 +70,19 @@
 		
 	  	
 		
-		<!-- Bootstrap core JavaScript-->
-		<script src="${pageContext.request.contextPath}/resources/vendor/jquery/jquery.min.js"></script>
-		<script src="${pageContext.request.contextPath}/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		
-		<!-- Core plugin JavaScript-->
-		<script src="${pageContext.request.contextPath}/resources/vendor/jquery-easing/jquery.easing.min.js"></script>
-		
-		<!-- Custom scripts for all pages-->
-		<script src="${pageContext.request.contextPath}/resources/js/sb-admin-2.min.js"></script>
-		
-		<!-- Page level plugins -->
-		<script src="${pageContext.request.contextPath}/resources/vendor/datatables/jquery.dataTables.min.js"></script>
-		<script src="${pageContext.request.contextPath}/resources/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-		
-		<!-- Page level custom scripts -->
-		<script src="${pageContext.request.contextPath}/resources/js/demo/datatables-demo.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/vendors/@popperjs/popper.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/vendors/is/is.min.js"></script>
+    <!-- <script src="${pageContext.request.contextPath}/resources/vendors/bootstrap/bootstrap.min.js"></script> -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="${pageContext.request.contextPath}/resources/vendors/fontawesome/all.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/assets/js/theme.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap" rel="stylesheet">
 		
 		<!-- jquery 임포트 코드가 로딩된 후에 실행하도록 페이지 마지막에 작성 -->
+		<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="${pageContext.request.contextPath}/resources/vendors/bootstrap/bootstrap.min.js"></script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/resources/assets/js/reply.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				var msg = '${msg}';
