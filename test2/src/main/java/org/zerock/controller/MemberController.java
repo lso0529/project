@@ -2,8 +2,10 @@ package org.zerock.controller;
 
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,8 +14,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.member.command.MemberVO;
 import org.zerock.member.service.MemberService;
 
+import lombok.extern.log4j.Log4j;
+
 @Controller
 @RequestMapping("/member/*")
+@Log4j
 public class MemberController {
 	
 	@Autowired
@@ -76,7 +81,28 @@ public class MemberController {
 			return "redirect:/member/login";
 		}
 	}
+	//아이디 찾기
+	@RequestMapping(value = "/findId", method = RequestMethod.GET)
+	public String findId() throws Exception{
+		return "member/findId";
+	}
 	
+	@RequestMapping(value="/findId_result", method = RequestMethod.POST)
+	public String findId_result(String email, Model model) throws Exception{
+		log.info("email: "+email);
+		
+		MemberVO vo = service.findIdCheck(email);
+		
+		if(vo==null) {
+			model.addAttribute("msg", "이메일을 확인해주세요");
+			return "/member/findId";
+		}else {
+			model.addAttribute("member", vo);
+			return "/member/findId_result";
+		}
+		
+	}
+
 	//로그아웃 처리 
 	@RequestMapping("/logout")
 	public String logout(HttpSession session) {

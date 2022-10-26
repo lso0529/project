@@ -1,9 +1,16 @@
 package org.zerock.member.service;
 
+import java.io.PrintWriter;
+import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.zerock.member.command.MemberVO;
 import org.zerock.member.mapper.MemberMapper;
+
+import com.fasterxml.jackson.databind.deser.impl.ManagedReferenceProperty;
 
 @Service("memberService")
 public class MemberServiceImpl implements MemberService {
@@ -32,6 +39,16 @@ public class MemberServiceImpl implements MemberService {
 		int result = mapper.login(vo);
 		System.out.println("성공? 실패?: "+result);
 		return result;
+	}
+
+	@Override
+	public List<MemberVO> findId(String email)throws Exception{
+		return mapper.findId(email);
+	}
+	@Override
+	public MemberVO findIdCheck(String email)throws Exception{
+		return mapper.findIdCheck(email);
+		
 	}
 
 }
