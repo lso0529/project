@@ -72,7 +72,7 @@ public class MemberController {
 			session.setAttribute("user_id", vo.getId());
 			return "redirect:/"; //Main으로 이동
 		}else {
-			RA.addAttribute("msg", "아이디 혹은 비밀번호를 확인하세요!"); //1회성 데이터에 msg저장
+			RA.addFlashAttribute("msg", "아이디 혹은 비밀번호를 확인하세요!"); //1회성 데이터에 msg저장
 			return "redirect:/member/login";
 		}
 	}

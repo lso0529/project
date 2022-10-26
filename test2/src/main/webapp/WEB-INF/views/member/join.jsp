@@ -14,17 +14,22 @@
 	
 	  <title>회원 가입</title>
 	  
+	<!-- Custom fonts for this template -->
+    <link rel="apple-touch-icon" sizes="180x180" href="${pageContext.request.contextPath}/resources/assets/img/favicons/apple-touch-icon.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="${pageContext.request.contextPath}/resources/assets/img/favicons/favicon-32x32.png">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/assets/img/favicons/favicon-16x16.png">
+
+    <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/assets/img/favicons/favicon.ico">
+
+    <link rel="manifest" href="${pageContext.request.contextPath}/resources/assets/img/favicons/manifest.json">
+
+    <meta name="msapplication-TileImage" content="${pageContext.request.contextPath}/resources/assets/img/favicons/mstile-150x150.png">
+
+    <meta name="theme-color" content="#ffffff">
 	  
-	  <!-- Custom fonts for this template -->
-	  <link href="${pageContext.request.contextPath}/resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-	  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-	
-	  <!-- Custom styles for this template -->
-	  <link href="${pageContext.request.contextPath}/resources/css/sb-admin-2.min.css" rel="stylesheet">
-	
-	  <!-- Custom styles for this page -->
-	  <link href="${pageContext.request.contextPath}/resources/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-	  
+
 	  
 	</head>
 	<body class="bg-gradient-primary">
@@ -76,6 +81,11 @@
 									<input type="text" class="form-control form-control-user" placeholder="성별" name="gender" id="gender">
 								</div>
 								
+								<!-- 나이 -->
+								<div class="form-group">
+									<input type="text" class="form-control form-control-user" placeholder="나이" name="age" id="age">
+								</div>
+								
 								<!-- 이메일 -->
 								<div class="form-group">
 									<input type="email" class="form-control form-control-user" placeholder="이메일" name="email" id="email">
@@ -102,15 +112,27 @@
 				</div>
 			</div>
 		</div>
-			
+	
+	 <script src="${pageContext.request.contextPath}/resources/vendors/@popperjs/popper.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/vendors/is/is.min.js"></script>
+    <!-- <script src="${pageContext.request.contextPath}/resources/vendors/bootstrap/bootstrap.min.js"></script> -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="${pageContext.request.contextPath}/resources/vendors/fontawesome/all.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/assets/js/theme.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap" rel="stylesheet">		
+	<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/vendors/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/assets/js/reply.js"></script>
+	
 	<script type="text/javascript">
 		function IdCheck() {
 			
 			var id = $("#id").val(); //id태그 값에 접근
 			var userId = {"id":id};  //전송할 데이터의 key:value설정
 			
-			if(id.length < 6){
-				alert("아이디는 6글자 이상 입력하세요");	
+			if(id.length < 4){
+				alert("아이디는 4글자 이상 입력하세요");	
 			}else{  //아이디 중복 체크 
 				//먼저 ajax가 지원하는 JSON(데이터포맷)을 사용하기 위해서 라이브러리가 필요함
 				//json은 {키:값}을 구조로 사용하는 데이터 묶음입니다.
@@ -130,7 +152,7 @@
 						console.log("있음(1)없음(0) 여부 : "+result);
 						
 						if(result == 1){ //중복된 아이디가 존재함
-							alert("이미 존재하는 아이다가 있습니다.");
+							alert("이미 존재하는 아이디가 있습니다.");
 						}else{
 							alert("사용가능한 아이디 입니다.");
 							$("#id").attr("readonly",true);
@@ -154,6 +176,14 @@
 			}else if($("#pw").val() != $("#pwCheck").val()){
 				alert("비밀번호 확인란을 확인하세요");
 				$("#pwCheck").focus();  //해당 id태그로 마우스 커서를 위치함.
+			}else if($("#gender").val().length < 1){
+				alert("성별을 입력해 주세요");	
+			}else if($("#age").val().length < 1){
+				alert("나이를 입력해 주세요");	
+			}else if($("#email").val() == ""){
+				alert("이메일을 입력해 주세요");	
+			}else if($("#city").val() == ""){
+				alert("지역을 입력해 주세요");	
 			}else if(confirm("회원가입 하시겠습니까?")){
 				$("#regForm").submit();
 			}
@@ -162,22 +192,14 @@
 	</script>
 	  	
 		
-		<!-- Bootstrap core JavaScript-->
-		<script src="${pageContext.request.contextPath}/resources/vendor/jquery/jquery.min.js"></script>
-		<script src="${pageContext.request.contextPath}/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		
-		<!-- Core plugin JavaScript-->
-		<script src="${pageContext.request.contextPath}/resources/vendor/jquery-easing/jquery.easing.min.js"></script>
-		
-		<!-- Custom scripts for all pages-->
-		<script src="${pageContext.request.contextPath}/resources/js/sb-admin-2.min.js"></script>
-		
-		<!-- Page level plugins -->
-		<script src="${pageContext.request.contextPath}/resources/vendor/datatables/jquery.dataTables.min.js"></script>
-		<script src="${pageContext.request.contextPath}/resources/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-		
-		<!-- Page level custom scripts -->
-		<script src="${pageContext.request.contextPath}/resources/js/demo/datatables-demo.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/vendors/@popperjs/popper.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/vendors/is/is.min.js"></script>
+    <!-- <script src="${pageContext.request.contextPath}/resources/vendors/bootstrap/bootstrap.min.js"></script> -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="${pageContext.request.contextPath}/resources/vendors/fontawesome/all.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/assets/js/theme.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap" rel="stylesheet">
 	</body>
 	
 </html>
