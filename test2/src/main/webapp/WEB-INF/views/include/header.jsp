@@ -24,7 +24,7 @@
 
     <!-- ===============================================-->
 
-    <title>Foodwagon | Responsive, Ecommerce &amp; Business Templatee</title>
+    <title>오점뭐? | 오늘 점심 뭐 먹지?</title>
 
  
 
@@ -85,7 +85,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" data-navbar-on-scroll="data-navbar-on-scroll">
 
-        <div class="container"><a class="navbar-brand d-inline-flex" href="${pageContext.request.contextPath}"><img class="d-inline-block" src="${pageContext.request.contextPath}/resources/assets/img/gallery/logo.svg" alt="logo" /><span class="text-1000 fs-3 fw-bold ms-2 text-gradient">foodwaGon</span></a>
+        <div class="container"><a class="navbar-brand d-inline-flex" href="${pageContext.request.contextPath}"><img class="d-inline-block" src="${pageContext.request.contextPath}/resources/assets/img/gallery/logo.svg" alt="logo" /><span class="text-1000 fs-3 fw-bold ms-2 text-gradient">오점뭐¿</span></a>
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
 
