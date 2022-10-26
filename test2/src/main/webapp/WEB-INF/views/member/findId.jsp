@@ -41,12 +41,13 @@
 				id="email" aria-describedby="emailHelp" name="email"
 				placeholder="이메일 주소를 입력하세요">
 		</div>
+		<div style="padding:10px;"> </div>
+		<div class="text-center">
 		<button type="submit" class="btn btn-primary btn-user btn-block">아이디 찾기</button>
+		</div>
 	</form>
 	<hr>
-
-	<a href="/member/login" class="btn btn-facebook btn-user btn-block">로그인 </a>
-	<hr>
+	
 	<div class="text-center">
 		<a class="small" href="/project">메인으로</a><!-- 절대경로 -->
 	</div>

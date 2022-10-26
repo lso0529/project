@@ -95,8 +95,9 @@
 								<div class="form-group">
 									<input type="text" class="form-control form-control-user" placeholder="지역" name="city" id="city">
 								</div>
-								
-								<input type="button" class="btn btn-primary btn-user btn-block" value="회원가입" onclick="joinCheck()"> 
+								<div class="text-center">
+								<input type="button" class="btn btn-primary btn-user btn-block" value="회원가입" onclick="joinCheck()">
+								</div>
 							</form>
 							
 							<hr>
@@ -151,7 +152,7 @@
 						//result매개변수로 전달됨.
 						console.log("있음(1)없음(0) 여부 : "+result);
 						
-						if(result == 1){ //중복된 아이디가 존재함
+						if(result == "<integer>1</integer>"){ //중복된 아이디가 존재함
 							alert("이미 존재하는 아이디가 있습니다.");
 						}else{
 							alert("사용가능한 아이디 입니다.");

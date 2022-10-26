@@ -32,15 +32,16 @@
 </head>
 <body>
 	<div class="card o-hidden border-0 shadow-lg my-5">
-
+	<div style="padding:10px;"> </div>
 		<div class="text-center">
-			<h2>아이디는 :</h2>
+			<h2>아이디는 </h2>
 			<ul>
+				<br>
 				<li>${member.id}</li><br />
 			</ul>
 			<h2>입니다</h2>
 			<button type="button" class="btn btn-primary"
-				onclick="location.href='/member/login'">로그인페이지</button>
+				onclick="location.href='login'">로그인페이지</button>
 			<button type="button" class="btn btn-primary"
 				onclick="location.href='/project'">메인페이지</button>
 

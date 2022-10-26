@@ -52,9 +52,12 @@
 								<!-- 비밀번호 -->
 								<div class="form-group">
 									<input type="password" class="form-control form-control-user" placeholder="비밀번호" name="pw">
-								</div>								
+								</div>	
+									<div style="padding:10px;"> </div>
+									<div class="text-center">							
 								<input type="submit" class="btn btn-primary btn-user btn-block" value="로그인">
 								<input type="button" class="btn btn-primary btn-user btn-block" value="회원가입" onclick="location.href='join'"> 
+								</div>
 							</form>
 							
 							<hr>
