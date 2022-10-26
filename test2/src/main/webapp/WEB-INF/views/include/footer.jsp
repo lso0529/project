@@ -11,30 +11,35 @@
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=서울">서울</a></li>
                 <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=부산">부산</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=속초">속초</a></li>
               </ul>
             </div>
             <div class="col-6 col-md-4 col-lg-auto mb-3">
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=대전">대전</a></li>
                 <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=대구">대구</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=경주">경주</a></li>
               </ul>
             </div>
             <div class="col-6 col-md-4 col-lg-auto mb-3">
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=광주">광주</a></li>
                 <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=인천">인천</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=여수">여수</a></li>
               </ul>
             </div>
             <div class="col-6 col-md-4 col-lg-auto mb-3">
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=강릉">강릉</a></li>
                 <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=제주">제주</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=거제">거제</a></li>
               </ul>
             </div>
             <div class="col-6 col-md-4 col-lg-auto mb-3">
               <ul class="list-unstyled mb-md-4 mb-lg-0">
                 <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=전주">전주</a></li>
-                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=인천">부천</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=부천">부천</a></li>
+                <li class="lh-lg"><a class="text-200 text-decoration-none" href="${pageContext.request.contextPath}/random/doRandom?location=포항">포항</a></li>
 
               </ul>
             </div>
