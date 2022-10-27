@@ -44,8 +44,9 @@
 				onclick="location.href='login'">로그인페이지</button>
 			<button type="button" class="btn btn-primary"
 				onclick="location.href='/project'">메인페이지</button>
-			<div style="padding:10px;"> </div>
+			<div style="padding:7px;"> </div>
 
+		</div>
 		</div>
 		<script src="${pageContext.request.contextPath}/resources/vendors/@popperjs/popper.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/vendors/is/is.min.js"></script>

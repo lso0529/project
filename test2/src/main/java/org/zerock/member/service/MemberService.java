@@ -11,4 +11,6 @@ public interface MemberService {
 	public int idCheck(String id); //아이디 확인
 	public List<MemberVO> findId(String email) throws Exception; //아이디 찾기
 	public MemberVO findIdCheck(String email) throws Exception; //아이디 찾기 확인
+	public int pwCheck(MemberVO vo) throws Exception; //비밀번호 찾기 
+	public int pwUpdate(MemberVO vo) throws Exception; //비밀번호 변경 
 }

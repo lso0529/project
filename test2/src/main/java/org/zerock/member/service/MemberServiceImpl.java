@@ -52,4 +52,16 @@ public class MemberServiceImpl implements MemberService {
 	
 	}
 
+	@Override
+	public int pwUpdate(MemberVO vo) throws Exception {
+		int result = mapper.pwUpdate(vo);
+		return result;
+	}
+
+	@Override
+	public int pwCheck(MemberVO vo) throws Exception {
+		int result = mapper.pwCheck(vo);
+		return result;
+	}
+
 }

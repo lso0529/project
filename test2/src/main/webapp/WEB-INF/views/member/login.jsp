@@ -53,7 +53,7 @@
 								<div class="form-group">
 									<input type="password" class="form-control form-control-user" placeholder="비밀번호" name="pw">
 								</div>	
-									<div style="padding:10px;"> </div>
+									<div style="padding:3px;"> </div>
 									<div class="text-center">							
 								<input type="submit" class="btn btn-primary btn-user btn-block" value="로그인">
 								<input type="button" class="btn btn-primary btn-user btn-block" value="회원가입" onclick="location.href='join'"> 
@@ -67,6 +67,9 @@
 				             <div class="text-center">
 				                <a class="small" href="findId">아이디 찾기</a>
 				            </div>			
+				               <div class="text-center">
+				                <a class="small" href="pwCheck">비밀번호 찾기</a>
+				            </div>		
 				            <div class="col-lg-3"></div>						
 						</div>
 					</div>

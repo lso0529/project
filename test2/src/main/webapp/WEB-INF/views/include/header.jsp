@@ -111,7 +111,6 @@
                 <%}else{ %>
 
                 <button class="btn btn-white shadow-warning text-warning" type="button" onclick="location.href='/project/board/list'">board</button>
-             	<button class="btn btn-white shadow-warning text-warning" type="button" onclick="location.href='/project/member/MyPage'">MyPage</button>
                 <button class="btn btn-danger shadow-warning text-light" type="button" onclick="location.href='/project/member/logout'"> <i class="fas fa-user me-2"></i>Logout</button>
 
                 <%} %>

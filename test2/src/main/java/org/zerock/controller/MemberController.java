@@ -105,6 +105,38 @@ public class MemberController {
 		}
 		
 	}
+	//비밀번호 확인
+	@RequestMapping(value = "/pwCheck", method = RequestMethod.GET)
+	public String findpw() throws Exception{
+		return "member/pwCheck";
+	}
+	//비밀번호 체크
+	@RequestMapping(value = "/findPwform")
+	public String findPwform(MemberVO vo)throws Exception{
+		int result = service.pwCheck(vo);
+		if(result == 1) {
+			System.out.println("y");
+			return "/member/pwUpdate"; // 비밀번호 수정 
+		}else {
+				System.out.println("n");
+			return "redirect:/member/login"; // 로그인
+			}
+		
+		}
+  
+	//비밀번호 수정 
+	@RequestMapping(value = "/pwUpdateForm")
+	public String pwUpdate(MemberVO vo)throws Exception{
+		int result = service.pwUpdate(vo);
+		if(result == 1) {
+			System.out.println("y");
+			return "redirect:/"; //메인으로
+		}else {
+			System.out.println("n");
+			return "redirect:/member/login"; //로그인 
+		}
+	}
+	
 
 	//로그아웃 처리 
 	@RequestMapping("/logout")

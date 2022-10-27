@@ -24,6 +24,7 @@
 		<!-- DataTales Example -->
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
+			<div style="padding:10px;"> </div>
 				<h6 class="m-0 font-weight-bold text-primary">후기 게시판
 				 
                     <button type="button" class="btn btn-primary btn-sm float-right" onclick="location.href='register?pageNum=${pageMaker.cri.pageNum}&count=${pageMaker.cri.count }'">글쓰기</button>

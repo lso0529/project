@@ -29,19 +29,26 @@
 	  
 	  
 	</head>
-<body>
-
-	<div class="text-center">
-		<h1 class="h4 text-gray-900 mb-2">아이디 찾기</h1>
-		<p class="mb-4">이메일을 입력해주세요!</p>
-	</div>
+<body class="bg-gradient-primary">
+		<div class="container">
+			
+			<div class="card o-hidden border-0 shadow-lg my-5">
+				<!-- nested Row within Card Body -->
+				<div class="row">
+					<div class="col-lg-3"></div>
+					
+					<div class="col-lg-6">
+						<div class="p-5">
+							<div class="text-center">
+								<h1 class="h4 text-gray-900 mb-4">아이디 찾기</h1>
+							</div>
 	<form class="user" action="findId_result" method="POST">
 		<div class="form-group">
 			<input type="email" class="form-control form-control-user"
 				id="email" aria-describedby="emailHelp" name="email"
 				placeholder="이메일 주소를 입력하세요">
 		</div>
-		<div style="padding:10px;"> </div>
+		<div style="padding:3px;"> </div>
 		<div class="text-center">
 		<button type="submit" class="btn btn-primary btn-user btn-block">아이디 찾기</button>
 		</div>
@@ -53,6 +60,11 @@
 	</div>
 	<div class="text-center">
 		   <a class="small" href="join">회원가입</a>
+		   				</div>
+				</div>
+			</div>
+		</div>
+		</div>
 	</div>
     <script src="${pageContext.request.contextPath}/resources/vendors/@popperjs/popper.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/vendors/is/is.min.js"></script>
