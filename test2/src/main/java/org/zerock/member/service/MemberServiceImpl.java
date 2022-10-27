@@ -49,6 +49,7 @@ public class MemberServiceImpl implements MemberService {
 	public MemberVO findIdCheck(String email)throws Exception{
 		return mapper.findIdCheck(email);
 		
+	
 	}
 
 }

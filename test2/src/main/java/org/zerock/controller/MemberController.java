@@ -1,11 +1,14 @@
 package org.zerock.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -37,13 +40,13 @@ public class MemberController {
 		
 	}
 	
-	@RequestMapping(value="/checkId",method=RequestMethod.POST)
+	@PostMapping(value="/checkId")
 	@ResponseBody
-	public int checkId(@RequestParam("id") String id) {
+	public String checkId(@RequestParam("id") String id) {
 		System.out.println(id);
 		int result = service.idCheck(id);
-		
-		return result;
+		System.out.println(result);
+		return String.valueOf(result);
 	}
 	
 
