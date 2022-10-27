@@ -16,4 +16,6 @@ public interface BoardMapper {
 	public ArrayList<BoardVO> pagingList(Criteria cri);	//페이징
 	
 	public int getTotal();	//전체 데이터 수
+	
+	public Integer insertSelectKey(BoardVO vo);
 }

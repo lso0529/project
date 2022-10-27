@@ -87,6 +87,7 @@
 					<artifactId>jmxri</artifactId>
 				</exclusion>
 			</exclusions>
+
 		</dependency>
 
 		<!-- @Inject -->
@@ -237,6 +238,14 @@
 		    <artifactId>commons-io</artifactId>
 		    <version>2.4</version>
 		</dependency>
+		
+		<!-- 섬네일 이미지 -->
+		<dependency>
+		<groupId>net.coobird</groupId>
+		<artifactId>thumbnailator</artifactId>
+		<version>0.4.8</version>
+		</dependency>
+		
 		
 	</dependencies>
     <build>

@@ -16,9 +16,21 @@
 		values(seq_board.nextval, #{title}, #{content}, #{writer})
 	</insert>
 	
+	<insert id="insertSelectKey">
+
+		<selectKey keyProperty="bno" order="BEFORE"
+			resultType="int">
+			select seq_board.nextval from dual
+		</selectKey>
+
+		insert into board01 (bno,title,content, writer)
+		values (#{bno},
+		#{title}, #{content}, #{writer})
+	</insert>
+	
 	<!-- 게시물 상세보기 resultType : 조회 결과 값을 저장하기 위한 데이터 타입-->
 	<select id="getContent" resultType="org.zerock.board.command.BoardVO" parameterType="int">
-		select * from board01 where bno= #{num}
+		select * from board01 where bno= #{bno}
 	</select>
 	
 	<!-- 게시물 수정하기  paramterType : 전달받은 파라이터 데이터 타입 지정-->
@@ -28,14 +40,14 @@
 
 	<!-- 게시물 삭제하기 -->
 	<delete id="deleteBoard" parameterType="int">
-		delete from board01 where bno = #{num}
+		delete from board01 where bno = #{bno}
 	</delete>
 	
 	<!-- 페이징 쿼리 -->
 	<select id="pagingList" resultType="org.zerock.board.command.BoardVO" parameterType="org.zerock.board.command.Criteria">
 		select * from 
 		(select rownum as rnum, B.* from board01 B where rownum &lt;= #{count_oracle} order by bno desc)
-		where #{pageStart} &lt;= rnum	
+		where #{pageStart} &lt;= rnum order by rnum desc
 	</select>
 	
 	<!-- 전체 게시물 수 -->
