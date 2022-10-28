@@ -43,7 +43,7 @@
 			<button type="button" class="btn btn-primary"
 				onclick="location.href='login'">로그인페이지</button>
 			<button type="button" class="btn btn-primary"
-				onclick="location.href='/project'">메인페이지</button>
+				onclick="location.href='${pageContext.request.contextPath}/'">메인페이지</button>
 			<div style="padding:7px;"> </div>
 
 		</div>

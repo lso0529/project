@@ -62,7 +62,7 @@
 							
 							<hr>
 							<div class="text-center">
-				                <a class="small" href="/project">메인으로</a><!-- 절대경로 -->
+				                <a class="small" href="${pageContext.request.contextPath}/">메인으로</a><!-- 절대경로 -->
 				            </div>
 				             <div class="text-center">
 				                <a class="small" href="findId">아이디 찾기</a>
